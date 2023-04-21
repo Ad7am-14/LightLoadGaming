@@ -1,0 +1,217 @@
+body {
+  background-image: url('images/bg.gif');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+}
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* adjust the opacity as needed */
+  z-index: -100;
+  background-repeat: repeat;
+}
+
+nav {
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* center the child elements horizontally */
+  align-items: center; /* center the child elements vertically */
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  float: left;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: block;
+  font-family: 'poppins', sans-serif;
+  opacity: 1;
+  background-color: transparent;
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out; /* add a smooth transition animation to the opacity and background-color properties */
+}
+
+nav a:hover {
+  opacity: 0.5; /* set the opacity to 0.5 when hovering */
+  color: #70AFCE; /* set the background-color to #70AFCE when hovering */
+}
+.navbar-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: navbar-text 2s ease-in-out forwards;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight:700;
+}
+@keyframes navbar-text {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: header-text 2s ease-in-out forwards;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight:700;
+  margin-top: 2rem;
+}
+@keyframes header-text {
+ from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }	
+}
+.my-button {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: my-button 2s ease-in-out forwards;
+  background-color: #653780; /* purble */
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 600px;
+  margin-top: 15;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  transition: box-shadow 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
+  background: linear-gradient(to right, #70AFCE, #70AFCE 50%, #fff 50%, #fff);
+  background-size: 200%;
+  transition: background-position 0.3s;
+}
+@keyframes my-button {
+ from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.my-button:hover {
+  background-position: -100%;
+}
+
+.my-button:active {
+  background-color: #70AFCE; /* purble */
+}
+
+@media screen and (max-width: 600px){
+	body::before{
+		width:202%;
+		height:202%;
+	}
+	.header-text{
+		margin-left: 67px;
+		font-size: 2rem;
+		font-weight: 700;
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 500%;
+		max-width: 600px;
+	}
+	nav{
+		margin-left:43px;
+		justify-content:center;
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 500%;
+		max-width: 600px;
+	}
+	.my-button{
+		margin:50px 300px;
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 40%;
+		max-width: 600px;
+	}
+  .navbar-text {
+    margin-left: 50px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 500%;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 300px){
+	body::before {
+		width:295%;
+		height:800px;
+	}
+	.my-button{
+		margin:50px 300px;
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 60%;
+		max-width: 600px;
+	}
+	@media screen and (max-width: 900px){
+
+		body::before {
+			width:500%;
+			height:100%
+		}
+
+	}
+	
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+nav .active a {
+  color: #70AFCE;
+  font-weight: bold;
+}
+
+.logo {
+			position: absolute;
+			top: 0;
+			left: -5;
+			margin: 15px;
+			width: 35px; /* set the width of the image */
+			height: auto; /* maintain aspect ratio */
+}
