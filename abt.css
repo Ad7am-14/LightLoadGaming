@@ -154,7 +154,7 @@ nav .active a {
 		height:400%;
 	}
 	.header-text{
-		left: 250px;
+		left: 225px;
 		font-size: 2.9rem;
 		font-weight: 700;
 		white-space: nowrap;
@@ -163,3 +163,4 @@ nav .active a {
 		max-width: 600px;
 		top: 100px;
 	}
+	0
