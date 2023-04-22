@@ -109,12 +109,12 @@ nav a:hover {
   display: inline-block;
   width: 250px;
   height: 400px;
-  background-image: url(images/steam.png);
+  background-image: url(images/Steam.png);
   background-size: cover;
   background-position: center;
   border: 1px solid #000;
   margin-top: 300px;
-  margin-left: 200px;
+  margin-left: 100px;
   border-radius: 20px;
   cursor: pointer;
   opacity: 0;
