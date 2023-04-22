@@ -144,36 +144,45 @@ nav a:hover {
 	}
 	.header-text{
 		margin-left: 67px;
-		font-size: 2rem;
+		font-size: 2.9rem;
 		font-weight: 700;
 		white-space: nowrap;
 		overflow-x: auto;
-		width: 500%;
+		width: 800%;
 		max-width: 600px;
+		margin-top: 150px;
 	}
 	nav{
 		margin-left:43px;
 		justify-content:center;
 		white-space: nowrap;
 		overflow-x: auto;
-		width: 500%;
+		width: 600%;
 		max-width: 600px;
+		height: 400%;
+
+		
 	}
 	.my-button{
-		margin:50px 300px;
+		margin:50px 250px;
 		white-space: nowrap;
 		overflow-x: auto;
-		width: 40%;
-		max-width: 600px;
+		width: 60%;
+		max-width: 500px;
+		max-height:400px;
+		font-size:25px;
+		margin-top: 20px;
 	}
   .navbar-text {
     margin-left: 50px;
-    font-size: 10px;
+    font-size: 1rem;
     font-weight: 700;
-    white-space: nowrap;
     overflow-x: auto;
     width: 500%;
     max-width: 600px;
+	word-wrap: break-word;
+	margin-top: 50px;
+
   }
 }
 
@@ -189,13 +198,97 @@ nav a:hover {
 		width: 60%;
 		max-width: 600px;
 	}
-	@media screen and (max-width: 900px){
 
-		body::before {
-			width:500%;
-			height:100%
-		}
+@media screen and (max-width: 800px) {
+  body::before {
+    width:203%;
+    height:203%;
+  }
+  .header-text {
+    margin-left: 600px;
+    font-size: 2.9rem;
+    font-weight: 700;
+    overflow-x: auto;
+    width: 800%;
+    max-width: 600px;
+    margin-top: 250px;
+  }
+  nav {
+    margin-left:43px;
+    justify-content:center;
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 600%;
+    max-width: 600px;
+    height: 400%;
+  }
+	 .my-button {
+		  margin:850px 250px;
+		  white-space: nowrap;
+		  overflow-x: auto;
+		  width: 60%;
+		  max-width: 500px;
+		  max-height:400px;
+		  font-size:25px;
+		  margin-top: 20px;
+      }
+  .navbar-text {
+    margin-left: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow-x: auto;
+    width: 500%;
+    max-width: 600px;
+    word-wrap: break-word;
+    margin-top: 50px;
+  }
+}
+	@media screen and (max-width: 320px){
+	body::before{
+		width:204%;
+		height:204%;
+	}
+	.header-text{
+		margin-left: 30px;
+		font-size: 2.9rem;
+		font-weight: 700;
+		overflow-x: auto;
+		width: 800%;
+		max-width: 600px;
+		margin-top: 150px;
+	}
+	nav{
+		margin-left:34px;
+		justify-content:center;
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 700%;
+		max-width: 600px;
+		height: 400%;
 
+		
+	}
+	.my-button{
+		margin:50px 250px;
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 60%;
+		max-width: 500px;
+		max-height:400px;
+		font-size:25px;
+		margin-top: 20px;
+	}
+  .navbar-text {
+    margin-left: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow-x: auto;
+    width: 500%;
+    max-width: 600px;
+	word-wrap: break-word;
+	margin-top: 50px;
+
+  }
 	}
 	
 }
