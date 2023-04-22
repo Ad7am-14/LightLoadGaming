@@ -104,6 +104,14 @@ nav a:hover {
 }
 
 /*steam*/
+
+
+
+nav .active a {
+  color: #70AFCE;
+  font-weight: bold;
+}
+
 .rectangle {
   position: relative;
   display: inline-block;
@@ -164,12 +172,6 @@ nav a:hover {
   z-index:4;
 }
 
-
-
-nav .active a {
-  color: #70AFCE;
-  font-weight: bold;
-}
 
 .rectangle2::before {
   content: "";
