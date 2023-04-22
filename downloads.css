@@ -143,7 +143,6 @@ nav .active a {
 }
 
 .rectangle::before {
-  transition: opacity 0.5s ease-in-out;
   content: "";
   position: absolute;
   top: 0;
