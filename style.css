@@ -2,36 +2,40 @@ body {
   background-image: url('images/bg.gif');
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: white;
+  margin: 0;
+  position: relative; /* Add this to make sure the overlay is positioned relative to the body */
 }
-body::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* adjust the opacity as needed */
-  z-index: -100;
-  background-repeat: repeat;
+
+body::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -100;
 }
 
 nav {
   background-color: transparent;
-  overflow: hidden;
   display: flex;
-  justify-content: center; /* center the child elements horizontally */
-  align-items: center; /* center the child elements vertically */
+  justify-content: center;
+  align-items: center;
   color: white;
+  margin-top: 20px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
@@ -39,31 +43,147 @@ nav li {
 }
 
 nav a {
-  float: left;
   text-align: center;
   color: white;
   text-decoration: none;
   padding: 14px 16px;
   display: block;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   opacity: 1;
   background-color: transparent;
-  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out; /* add a smooth transition animation to the opacity and background-color properties */
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 nav a:hover {
-  opacity: 0.5; /* set the opacity to 0.5 when hovering */
-  color: #70AFCE; /* set the background-color to #70AFCE when hovering */
+  opacity: 0.5;
+  color: #70AFCE;
 }
-.navbar-text {
+
+.header-text,
+.navbar-text,
+.my-button {
   opacity: 0;
   transform: translateY(20px);
-  animation: navbar-text 2s ease-in-out forwards;
-  text-align: center;
+  animation: fade-in 2s ease-in-out forwards;
   font-family: 'Poppins', sans-serif;
-  font-weight:700;
+  text-align: center;
 }
-@keyframes navbar-text {
+
+.header-text {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.navbar-text {
+  font-size: 1.2rem;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.my-button {
+  background-color: #653780;
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 50px 590px;
+  margin-top: 15;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  transition: box-shadow 0.3s ease-in-out;
+  background: linear-gradient(to right, #70AFCE, #70AFCE 50%, #fff 50%, #fff);
+  background-size: 200%;
+}
+
+.my-button:hover {
+  background-position: -100%;
+}
+
+.my-button:active {
+  background-color: #70AFCE;
+}
+
+@media screen and (max-width: 600px) {
+  .header-text {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 150px;
+  }
+  .navbar-text {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    margin-right: 20px;
+  }
+  .my-button {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 80%;
+  }
+  nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav li {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .header-text {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 150px;
+  }
+  .navbar-text {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    margin-right: 20px;
+  }
+  .my-button {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 40%;
+  }
+  nav li {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+    
+  .header-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+  .navbar-text {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    margin-right: 20px;
+  }
+  .my-button {
+    margin-top: 15;
+    width: auto;
+    margin-left:590px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+}
+
+@keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -74,237 +194,43 @@ nav a:hover {
   }
 }
 
-.header-text {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: header-text 2s ease-in-out forwards;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
-  font-weight:700;
-  margin-top: 2rem;
-}
-@keyframes header-text {
- from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }	
-}
-.my-button {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: my-button 2s ease-in-out forwards;
-  background-color: #653780; /* purble */
-  border: none;
-  color: white;
-  padding: 20px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 600px;
-  margin-top: 15;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 5px;
+body::before {
+  content: "";
+  display: block;
   position: absolute;
-  transition: box-shadow 0.3s ease-in-out;
-  font-family: 'poppins', sans-serif;
-  background: linear-gradient(to right, #70AFCE, #70AFCE 50%, #fff 50%, #fff);
-  background-size: 200%;
-  transition: background-position 0.3s;
-}
-@keyframes my-button {
- from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 590%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -100;
 }
 
-.my-button:hover {
-  background-position: -100%;
-}
+@media screen and (max-width: 600px) {
 
-.my-button:active {
-  background-color: #70AFCE; /* purble */
-}
-
-@media screen and (max-width: 600px){
-	body::before{
-		width:202%;
-		height:202%;
-	}
-	.header-text{
-		margin-left: 67px;
-		font-size: 2.8rem;
-		font-weight: 700;
-		white-space: nowrap;
-		overflow-x: auto;
-		width: 800%;
-		max-width: 600px;
-		margin-top: 150px;
-	}
-	nav{
-		margin-left:43px;
-		justify-content:center;
-		white-space: nowrap;
-		overflow-x: auto;
-		width: 600%;
-		max-width: 600px;
-		height: 400%;
-
-		
-	}
-	.my-button{
-		margin:50px 250px;
-		white-space: nowrap;
-		overflow-x: auto;
-		width: 60%;
-		max-width: 500px;
-		max-height:400px;
-		font-size:25px;
-		margin-top: 20px;
-	}
-  .navbar-text {
-    margin-left: 50px;
-    font-size: 1rem;
-    font-weight: 700;
-    overflow-x: auto;
-    width: 500%;
-    max-width: 600px;
-	word-wrap: break-word;
-	margin-top: 50px;
-
-  }
-}
-
-@media screen and (max-width: 300px){
-	body::before {
-		width:295%;
-		height:800px;
-	}
-	.my-button{
-		margin:50px 300px;
-		white-space: nowrap;
-		overflow-x: auto;
-		width: 60%;
-		max-width: 600px;
-	}
-
-@media screen and (max-width: 800px) {
+    .my-button{
+        margin-left:22px;
+    }
+    .navbar-text{
+        margin-left:60px;
+    }
+    .header-text{
+        margin-left:23px;
+        font-size: 40px;
+        margin-top: 50px;
+    }
+    nav {
+        margin:0px 200px;
+    }
   body::before {
-    width:203%;
-    height:203%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 119%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -100;
   }
-  .header-text {
-    margin-left: 600px;
-    font-size: 2.9rem;
-    font-weight: 700;
-    overflow-x: auto;
-    width: 800%;
-    max-width: 600px;
-    margin-top: 250px;
-  }
-  nav {
-    margin-left:43px;
-    justify-content:center;
-    white-space: nowrap;
-    overflow-x: auto;
-    width: 600%;
-    max-width: 600px;
-    height: 400%;
-  }
-	 .my-button {
-		  margin:850px 250px;
-		  white-space: nowrap;
-		  overflow-x: auto;
-		  width: 60%;
-		  max-width: 500px;
-		  max-height:400px;
-		  font-size:25px;
-		  margin-top: 20px;
-      }
-  .navbar-text {
-    margin-left: 50px;
-    font-size: 1rem;
-    font-weight: 700;
-    overflow-x: auto;
-    width: 500%;
-    max-width: 600px;
-    word-wrap: break-word;
-    margin-top: 50px;
-  }
-}
-	@media screen and (max-width: 320px){
-	body::before{
-		width:204%;
-		height:204%;
-	}
-	.header-text{
-		margin-left: 30px;
-		font-size: 2.9rem;
-		font-weight: 700;
-		overflow-x: auto;
-		width: 800%;
-		max-width: 600px;
-		margin-top: 150px;
-	}
-	nav{
-		margin-left:34px;
-		justify-content:center;
-		white-space: nowrap;
-		overflow-x: auto;
-		width: 700%;
-		max-width: 600px;
-		height: 400%;
-
-		
-	}
-	.my-button{
-		margin:50px 250px;
-		white-space: nowrap;
-		overflow-x: auto;
-		width: 60%;
-		max-width: 500px;
-		max-height:400px;
-		font-size:25px;
-		margin-top: 20px;
-	}
-  .navbar-text {
-    margin-left: 25px;
-    font-size: 1rem;
-    font-weight: 700;
-    overflow-x: auto;
-    width: 500%;
-    max-width: 600px;
-	word-wrap: break-word;
-	margin-top: 50px;
-
-  }
-	}
-	
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-nav .active a {
-  color: #70AFCE;
-  font-weight: bold;
-}
-
-.logo {
-			position: absolute;
-			top: 0;
-			left: -5;
-			margin: 15px;
-			width: 35px; /* set the width of the image */
-			height: auto; /* maintain aspect ratio */
 }
