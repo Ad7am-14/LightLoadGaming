@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>LightLoadGaming</title>
-    <link rel="stylesheet" href="style.css">
-    <a href="index.html">
-    <img src="images\logo.png" alt="Logo" class="logo">
-    </a>
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main css/frameWork.css" />
+    <link rel="stylesheet" href="main css/style.css" />
+    <script src="main javascript/script.js"></script>
+    <title>LightLoadGaming Home</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="Downloads.html">Downloads</a></li>
-        <li><a href="abt.html">About us</a></li>
-      </ul>
-    </nav>
-
-
-
-    <h1 class="header-text">LightLoadGaming - Limits?<br> We Breaked it!</h1>
-        <div class="navbar-text">
-      <p> Introducing Light Load Gaming - the perfect solution for gamers with limited internet who want to enjoy free games from popular platforms like Steam, Epic Games, Riot Games, and more! Say goodbye to frustratingly slow downloads and hello to a seamless gaming experience with Light Load Gaming.<br> steam, epic games,riot games, and many others! </p>
-    </div>
-    <button class="my-button"><a href="Downloads.html" style="color:white; text-decoration: none"; >Let's go!</button>
-</div>
-
-
-
-
-   </body>
+    <section class="landing-page">
+      <div class="container">
+        <header class="head">
+          <nav>
+            <ul>
+              <li><button class="active">Home</button></li>
+              <li><button onclick="window.location.href='Downloads.html'">Downloads</button></li>
+              <li><button>About Us</button></li>
+            </ul>
+            <img src="images/logo.png" alt="Logo" />
+          </nav>
+        </header>
+        <div class="content">
+          <h1>
+            LightLoadGaming- Limits?<br />
+            We broke it
+          </h1>
+          <p>
+            "Welcome to LightLoadGaming,<br />
+            the ultimate destination for gamers with limited internet
+            connection. Our mission is to help gamers from around the world
+            enjoy their favorite games without worrying about slow download
+            speeds or high data usage. As developers from Egypt, we understand
+            the challenges of limited internet access and are dedicated to
+            providing high-quality game compression services to our fellow
+            gamers. Browse our selection of compressed games and experience
+            fast, seamless gameplay today!"
+          </p>
+          <button onclick="window.location.href='Downloads.html'">Let's Go!</button>
+        </div>
+      </div>
+    </section>
+    <script src="main javascript/script.js"></script>
+  </body>
 </html>

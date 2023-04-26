@@ -1,50 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LightLoadGaming-Downloads</title>
-    <link rel="stylesheet" href="downloads.css">
-    <a href="index.html">
-	<img src="images\logo.png" alt="Logo" class="logo">
-    </a>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main css/search-bar.css">
+    <link rel="stylesheet" href="main css/frameWork.css" />
+    <link rel="stylesheet" href="main css/style.css" />
+    <link rel="stylesheet" href="main css/Download.css" />
+
+    <script src="main javascript/script.js"></script>
+    <title>LightLoadGaming Home</title>
   </head>
-  <body> 
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="Downloads.html">Downloads</a></li>
-        <li><a href="abt.html">About us</a></li>
-      </ul>
-    </nav>
-
-    <h1 class="header-text">Downloads</h1>
-    <a href="steam.html">
-     <div class="rectangle">
-         <div class="overlay">
-           <h2>Steam</h2>
-          </div>
-     </div>
-    </a>
-    <a href="epic.html">
-     <div class="rectangle2">
-        <div class="overlay">
-             <h2>Epic Games</h2>
-        </div>
-      </div>
-    </a>
-    
-    <a href="rg.html">
-        <div class="rectangle3">
-            <div class="overlay">
-                <h2>Riot Games</h2>
-            </div>
-        </div>
-    </a>
-
-
-
-   </body>
+  <body>
+  <section class="landing-page">
+  <div class="container">
+    <header class="head">
+      <nav>
+        <ul>
+          <li><button onclick="window.location.href='index.html'" >Home</button></li>
+          <li><button onclick="window.location.href='Downloads.html'" class="active">Downloads</button></li>
+          <li><button onclick="window.location.href='abt.html'">About Us</button></li>
+        </ul>
+        <img src="images/logo.png" alt="Logo"/>
+      </nav>
+    </header>
+    <div class="content">
+      <h1>Downloads</h1>
+        <a href="#" class="rectangular-button">Download Now</a>
+    </div>
+  </div>
+</section>
+    <script src="main javascript/script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,43 @@
+.landing-page {
+  height: 100vh;
+}
+@media (max-width: 450px) {
+  .landing-page {
+    height: 110vh;
+  }
+}
+.landing-page .container .content {
+  display: block;
+  width: 600px;
+  margin: 50px 0;
+}
+@media (max-width: 900px) {
+  .landing-page .container .content {
+    width: 100%;
+  }
+}
+.landing-page .container .content h1 {
+  font-size: 40px;
+  overflow-wrap: break-word;
+}
+.landing-page .container .content p {
+  font-size: 14px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+.landing-page .container .content button {
+  all: unset;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #5d92c9;
+  padding: 20px 70px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.landing-page .container .content button:hover {
+  color: #5d92c9;
+  background-color: #fff;
+}
