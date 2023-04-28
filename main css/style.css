@@ -5,6 +5,9 @@
   .landing-page {
     height: 110vh;
   }
+  body::before{
+      height: 110vh;
+  }
 }
 .landing-page .container .content {
   display: block;
