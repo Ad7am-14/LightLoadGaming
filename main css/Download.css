@@ -1,25 +1,65 @@
-.rectangular-button {
-  display: inline-block;
-  padding: 10px 20px;
+.Steam {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
   border: none;
-  border-radius: 500px; /* set the border radius to 10px */
-  font-size: 16px;
+  border-radius: 50px;
   cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-  background-image: url(images/steam.jpg);
+  max-width: 500px;
 }
-body:before{
-	height: 161%;
+
+.epic {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  max-width: 500px;
+  margin-top: 40px;
+}
+
+.riot {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  max-width: 500px;
+  margin-top: 40px;
+
+}
+
+@media (max-width: 450px) {
+  .Steam {
+    border-radius: 20px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 50px;
+  }
+  .epic {
+    border-radius: 20px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 50px;
+  }
+  .riot {
+    border-radius: 20px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 50px;
+   }
+   body::before {
+	height: 140vh;
+   } 
+}
+body::before{
+	height: 170vh;
 }
 .landing-page {
   height: 100vh;
 }
-@media (max-width: 450px) {
-  .rectangular-button {
-    padding: 5px 10px; /* adjust the padding to make the button smaller */
-    border-radius: 20px; /* adjust the border radius to make the corners more rounded */
-  }
 }
 .landing-page .container .content {
   display: block;
@@ -29,6 +69,9 @@ body:before{
 @media (max-width: 900px) {
   .landing-page .container .content {
     width: 100%;
+  }
+  body::before{
+      height:210vh;
   }
 }
 .landing-page .container .content h1 {

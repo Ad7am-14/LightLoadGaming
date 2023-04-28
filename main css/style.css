@@ -5,6 +5,9 @@
   .landing-page {
     height: 110vh;
   }
+  .rectangular-button{
+      max-width: 400px;
+  }
   body::before{
       height: 110vh;
   }
