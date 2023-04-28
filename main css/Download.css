@@ -1,12 +1,37 @@
 .rectangular-button {
   display: inline-block;
   padding: 10px 20px;
-  background-image: url(images/steam.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   border: none;
-  border-radius: 5px;
+  border-radius: 500px; /* set the border radius to 10px */
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
+  color: #fff;
+  background-image: url(images/steam.jpg);
+}
+body:before{
+	height: 161%;
+}
+.landing-page {
+  height: 100vh;
+}
+@media (max-width: 450px) {
+  .rectangular-button {
+    padding: 5px 10px; /* adjust the padding to make the button smaller */
+    border-radius: 20px; /* adjust the border radius to make the corners more rounded */
+  }
+}
+.landing-page .container .content {
+  display: block;
+  width: 600px;
+  margin: 50px 0;
+}
+@media (max-width: 900px) {
+  .landing-page .container .content {
+    width: 100%;
+  }
+}
+.landing-page .container .content h1 {
+  font-size: 40px;
+  overflow-wrap: break-word;
 }
