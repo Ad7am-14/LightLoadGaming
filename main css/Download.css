@@ -10,6 +10,8 @@
   margin-top:100px;
 }
 
+
+
 .epic {
   display: block;
   margin: 0 auto;
@@ -18,7 +20,13 @@
   border-radius: 50px;
   cursor: pointer;
   max-width: 500px;
-  margin-top: 40px;
+  margin-top: 80px;
+  opacity: 0;
+  transition: opacity 1.6s;
+}
+
+.epic.animate {
+  opacity: 1;
 }
 
 .riot {
@@ -29,8 +37,13 @@
   border-radius: 50px;
   cursor: pointer;
   max-width: 500px;
-  margin-top: 40px;
+  margin-top: 80px;
+  opacity: 0;
+  transition: opacity 1.6s;
+}
 
+.riot.animate {
+  opacity: 1;
 }
 
 
@@ -57,7 +70,7 @@
 .landing-page {
   height: 100vh;
 }
-}
+
 .landing-page .container .content {
   display: block;
   width: 600px;
@@ -68,12 +81,7 @@
     width: 100%;
   }
 
-  .Steam{
-  }
-  .epic{
-  }
-  .riot{
-  }
+
 }
 .landing-page .container .content h1 {
   font-size: 40px;
